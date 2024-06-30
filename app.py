@@ -3,7 +3,7 @@ import joblib
 import pandas as pd
 
 # Load the pretrained model
-model = joblib.load(r"C:\\Users\David Yeboah\Downloads\\insurance_model.pkl")
+model = joblib.load(os.path.join(os.getcwd(), 'insurance_model.pkl'))
 
 st.markdown("# Insurance Predictions")
 
@@ -49,8 +49,6 @@ df = user_input_features()
 # Display user input
 st.subheader('User Input features')
 st.write(df)
-
-df['gender'] = df['gender'].map({'Male': 0, 'Female': 1})
 # Add any other necessary preprocessing steps here
 
 # Prediction
