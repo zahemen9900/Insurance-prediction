@@ -10,9 +10,6 @@ model = joblib.load(os.path.join(os.getcwd(), 'insurance_model.pkl'))
 # Add some CSS styling for better appearance
 st.markdown("""
     <style>
-    .main {
-        background-color: #f5f5f5;
-    }
     .sidebar .sidebar-content {
         background-color: #f8f9fa;
     }
