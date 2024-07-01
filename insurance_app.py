@@ -46,10 +46,10 @@ def user_input_features():
     proposals = st.sidebar.date_input('Date of Proposal')
     
     st.sidebar.markdown("#### Financial Details")
-    policy_value = st.sidebar.slider('Policy Value', 0.0, 1000000.0, 100000.0)
-    paid_premium = st.sidebar.slider('Paid Premium', 0.0, 1000000.0, 50000.0)
-    premium = st.sidebar.slider('Premium', 0, 100000, 10000)
-    total_premium = st.sidebar.slider('Total Premium', 0.0, 1000000.0, 150000.0)
+    policy_value = st.sidebar.slider('Policy Value', 0.0, 5000.0, 1500.0)
+    paid_premium = st.sidebar.slider('Paid Premium', 0.0, 5000.0, 2100.0)
+    premium = st.sidebar.slider('Premium', 0.0, 5000.0, 1475.0)
+    total_premium = st.sidebar.slider('Total Premium',0.0, 5000.0, 700.0)
     policy_duration_years = st.sidebar.slider('Policy Duration (Years)', 0.0, 50.0, 5.0)
     
     data = {
@@ -104,7 +104,7 @@ if st.sidebar.button('Get Predictions'):
 
         # Display prediction
         st.subheader('Prediction')
-        st.write(f'The predicted insurance cost is: ${prediction[0]:.2f}')
+        st.write(f'The predicted insurance cost is: GH₵{prediction[0]:.2f}')
         
         # Display a success message
         st.success('Prediction generated successfully!')
